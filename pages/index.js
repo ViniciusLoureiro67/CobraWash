@@ -143,7 +143,7 @@ export default function Home() {
               href="mailto:viniciussloureiro@hotmail.com"
               className="hover:text-yellow-400"
             >
-              viniciussloureiro@hotmail.com
+              Mande um Email
             </a>
           </footer>
         </div>
