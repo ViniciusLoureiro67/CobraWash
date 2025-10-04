@@ -32,3 +32,12 @@ O projeto foi desenvolvido com foco em:
 
 ---
 
+## 🛠️ Tecnologias e Dependências
+
+Este projeto foi construído com os seguintes pacotes principais:
+
+* **`next`**: O framework React
+* **`react`** & **`react-dom`**: A biblioteca de UI
+* **`tailwindcss`**: Para estilização rápida
+* **`autoprefixer`** & **`postcss`**: Para processamento de CSS
+* **`react-icons`**: Para os ícones sociais (`FaWhatsapp`, `FaInstagram`, etc.)
