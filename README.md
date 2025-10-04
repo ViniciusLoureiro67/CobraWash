@@ -30,26 +30,5 @@ O projeto foi desenvolvido com foco em:
 | 🌑 **Estética** | Design em **Dark Mode** responsivo e elegante, feito com Tailwind CSS. |
 | 📈 **Performance** | Construído com **Next.js** para otimização de imagens, SEO e carregamento rápido. |
 
-## 🖼️ Preview
-
-Veja como ficou o resultado final:
-
-<p align="center">
-  <img src="https://i.imgur.com/image_0a1749.png" alt="Screenshot da Landing Page da CobraWash" width="400"/>
-</p>
-
 ---
 
-## 💻 Configuração e Instalação
-
-Siga estes passos para ter uma cópia do projeto rodando localmente.
-
-### Pré-requisitos
-
-Você precisará ter o **Node.js** (versão 18+ recomendada) e o `npm` ou `yarn` instalados.
-
-### 1. Clonar o Repositório
-
-```bash
-git clone [URL-DO-SEU-REPOSITÓRIO]
-cd nome-do-seu-repositorio
