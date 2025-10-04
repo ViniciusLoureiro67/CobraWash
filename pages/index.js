@@ -140,10 +140,10 @@ export default function Home() {
             </div>
 
             <a
-              href="mailto:contato@cobrawash.com.br"
+              href="mailto:viniciussloureiro@hotmail.com"
               className="hover:text-yellow-400"
             >
-              contato@cobrawash.com.br
+              viniciussloureiro@hotmail.com
             </a>
           </footer>
         </div>
