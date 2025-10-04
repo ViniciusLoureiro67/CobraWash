@@ -1,6 +1,6 @@
 # 🐍 CobraWash Link-in-Bio & Landing Page
 
-### `Landing Page moderna para serviços de detalhamento de motos.`
+## `Landing Page moderna para serviços de detalhamento de motos.`
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Badge Next.js" />
