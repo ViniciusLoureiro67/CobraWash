@@ -95,7 +95,7 @@ export default function Home() {
 
             {/* Localização */}
             <a
-              href="https://maps.app.goo.gl/gQFJUyTnnRKK7uhk7" // Corrigir este link para um real!
+              href="https://maps.google.com/?cid=3729531632299626644&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
               target="_blank"
               className="flex items-center justify-center gap-2 sm:gap-3 bg-[#1a1a1a] border border-white/20 hover:border-yellow-400/50 rounded-xl px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg transition"
             >
