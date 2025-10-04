@@ -1,115 +1,163 @@
+import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Head>
+        <title>CobraWash — Lavagem & Detalhamento de Motos</title>
+        <meta
+          name="description"
+          content="CobraWash · Lavagem, detalhamento e proteção para motos em Maceió. Agende pelo WhatsApp."
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <meta
+          property="og:title"
+          content="CobraWash — Lavagem & Detalhamento de Motos"
+        />
+        <meta
+          property="og:description"
+          content="Lavagem, detalhamento e proteção para motos em Maceió. Agende pelo WhatsApp."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/cobrawashicone.png" />
+        <meta name="theme-color" content="#0A0A0A" />
+        <link rel="icon" href="/cobrawashicone.png" />
+      </Head>
+
+      <main className="min-h-screen flex items-center justify-center bg-black text-white p-6 relative overflow-hidden">
+        {/* Marca d’água na tela toda */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+          <Image
+            src="/cobrawashicone.png"
+            alt="CobraWash Marca d’água"
+            width={800}
+            height={800}
+            className="object-contain"
+          />
         </div>
+
+        {/* Card principal */}
+        <div className="w-full max-w-2xl bg-[#121212]/95 border border-yellow-500/20 rounded-2xl shadow-lg p-10 text-center relative z-10">
+          {/* Logo + título */}
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-36 h-36 rounded-2xl overflow-hidden border border-yellow-500/40 shadow-lg">
+              <Image
+                src="/cobrawashicone.png"
+                alt="CobraWash Logo"
+                width={150}
+                height={150}
+                className="object-contain"
+              />
+            </div>
+            <h1 className="mt-4 text-5xl font-extrabold tracking-wide text-yellow-400 drop-shadow-lg">
+              CobraWash
+            </h1>
+            <p className="text-lg text-gray-300 mt-2">
+              Lavagem • Detalhamento • Proteção (Maceió)
+            </p>
+            <span className="inline-flex items-center gap-2 text-yellow-400 border border-yellow-400 rounded-full px-4 py-1 text-sm font-semibold mt-3">
+              🐍 Agenda aberta
+            </span>
+          </div>
+
+          {/* Botões */}
+          <div className="flex flex-col gap-4 mt-6">
+            {/* WhatsApp principal */}
+            <a
+              href="https://wa.me/5582993060696?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20CobraWash"
+              target="_blank"
+              className="flex items-center justify-center gap-3 w-full text-center bg-yellow-500 hover:bg-yellow-600 text-black text-lg font-bold py-4 px-6 rounded-xl shadow-md transition"
+            >
+              <FaWhatsapp className="text-2xl" />
+              Fale conosco no WhatsApp
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/cobrawash_/"
+              target="_blank"
+              className="flex items-center justify-center gap-3 bg-[#1a1a1a] border border-white/20 hover:border-yellow-400/50 rounded-xl px-6 py-4 text-lg transition"
+            >
+              <FaInstagram className="text-2xl text-pink-500" />
+              Instagram{" "}
+              <span className="ml-2 text-gray-400 text-sm">@cobrawash_</span>
+            </a>
+
+            {/* Localização */}
+            <a
+              href="https://maps.app.goo.gl/gQFJUyTnnRKK7uhk7"
+              target="_blank"
+              className="flex items-center justify-center gap-3 bg-[#1a1a1a] border border-white/20 hover:border-yellow-400/50 rounded-xl px-6 py-4 text-lg transition"
+            >
+              <FaMapMarkerAlt className="text-2xl text-red-500" />
+              Localização{" "}
+              <span className="ml-2 text-gray-400 text-sm">Google Maps</span>
+            </a>
+          </div>
+
+          {/* Serviços */}
+          <div className="mt-10 bg-yellow-500/10 border border-yellow-500 rounded-xl p-6 text-left">
+            <h3 className="font-bold text-yellow-400 text-lg mb-3 uppercase">
+              Serviços rápidos
+            </h3>
+            <ul className="space-y-2 text-gray-200 text-base">
+              <li>✔ Lavagem padrão — R$ 40</li>
+              <li>✔ Lavagem premium — R$ 60</li>
+              <li>
+                ✔ Vitrificação —{" "}
+                <a
+                  href="https://wa.me/5582993060696?text=Olá!%20Quero%20agendar%20uma%20vitrificação"
+                  target="_blank"
+                  className="text-yellow-400 underline hover:text-yellow-300"
+                >
+                  agendar via WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Footer */}
+          <footer className="mt-6 flex flex-col sm:flex-row justify-between text-sm text-gray-500 items-center gap-2">
+            <span>© {new Date().getFullYear()} CobraWash</span>
+
+            <div className="flex items-center gap-1">
+              <span>Site desenvolvido por:</span>
+              <a
+                href="https://www.linkedin.com/in/vsloureiro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-yellow-400 hover:text-yellow-300 font-medium"
+              >
+                <FaLinkedin className="text-blue-500 text-lg" />
+                Vinicius Loureiro
+              </a>
+            </div>
+
+            <a
+              href="mailto:contato@cobrawash.com.br"
+              className="hover:text-yellow-400"
+            >
+              contato@cobrawash.com.br
+            </a>
+          </footer>
+        </div>
+
+        {/* Botão flutuante WhatsApp */}
+        <a
+          href="https://wa.me/5582993060696?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20CobraWash"
+          target="_blank"
+          className="fixed bottom-5 right-5 bg-yellow-500 hover:bg-yellow-600 text-black p-4 rounded-full shadow-lg z-50"
+          aria-label="Fale conosco no WhatsApp"
+        >
+          <FaWhatsapp className="text-3xl" />
+        </a>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
